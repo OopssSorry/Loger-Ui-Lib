@@ -65,7 +65,7 @@ function Library:CreateFrame(label, font)
 	_1_1.Name = " "
 	_1_1.Parent = _1
 	_1_1.AnchorPoint = Vector2.new(0, 1)
-	_1_1.BackgroundColor3 = Color3.fromRGB(100, 100, 150)
+	_1_1.BackgroundColor3 = Color3.fromRGB(22, 19, 62)
 	_1_1.Position = UDim2.new(0, 20, 1, -20)
 	_1_1.Size = UDim2.new(0, 300, 0, 300)
 	_1_1_1.Name = " "
@@ -75,8 +75,7 @@ function Library:CreateFrame(label, font)
 	_1_1_2.Parent = _1_1
 	_1_1_2.Active = true
 	_1_1_2.AnchorPoint = Vector2.new(0.5, 0)
-	_1_1_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	_1_1_2.BackgroundTransparency = 1.000
+	_1_1_2.BackgroundTransparency = 1
 	_1_1_2.Position = UDim2.new(0.5, 0, 0.15, 0)
 	_1_1_2.Size = UDim2.new(1, 0, 0.85, 0)
 	_1_1_2.CanvasSize = UDim2.new(0, 0, 0, 3)
@@ -94,8 +93,8 @@ function Library:CreateFrame(label, font)
 	_1_1_3.Size = UDim2.new(1, 0, 0.15, 0)
 	_1_1_3.Font = font
 	_1_1_3.Text = label
-	_1_1_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-	_1_1_3.TextSize = 30.000
+	_1_1_3.TextColor3 = Color3.fromRGB(140, 125, 255)
+	_1_1_3.TextScaled = true
 	_1_1_3.TextWrapped = true
 	dragify(_1_1)
 	function Library.RemoveFrame()
@@ -107,14 +106,15 @@ function Library:CreateFrame(label, font)
 		local NewMsg = Instance.new("TextLabel")
 		NewMsg.Name = L.." - msg"
 		NewMsg.RichText = true
+		NewMsg.TextXAlignment = Enum.TextXAlignment.Left
 		NewMsg.AutomaticSize = Enum.AutomaticSize.Y
 		NewMsg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		NewMsg.BackgroundTransparency = 1.000
-		NewMsg.Size = UDim2.new(1, 0, 0, 25)
+		NewMsg.Size = UDim2.new(1, 0, 0, 20)
 		NewMsg.Text = text
 		NewMsg.TextColor3 = Color3.fromRGB(255, 255, 255)
 		NewMsg.TextScaled = false
-		NewMsg.TextSize = 30
+		NewMsg.TextSize = 20
 		NewMsg.TextWrapped = true
 		NewMsg.Font = Enum.Font.Arcade
 		NewMsg.Parent = _1_1_2
