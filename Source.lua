@@ -108,7 +108,49 @@ function Library:CreateFrame(label, font)
 		NewMsg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		NewMsg.BackgroundTransparency = 1.000
 		NewMsg.Size = UDim2.new(1, 0, 0, 20)
-		NewMsg.Text = "<b>"..os.date("%X").."</b> "..text
+		NewMsg.Text = "<font color=\"rgb(175, 175, 175)\"><b>"..os.date("%X").."<font/></b> "..text
+		NewMsg.TextColor3 = Color3.fromRGB(255, 255, 255)
+		NewMsg.TextScaled = false
+		NewMsg.TextSize = 16
+		NewMsg.TextWrapped = true
+		NewMsg.Font = font
+		NewMsg.Parent = _1_1_2
+		L = L + 1
+		if tonumber(_1_1_2.CanvasPosition.Y) >= tonumber(_1_1_2.CanvasSize.Y.Offset) and DragScrollToggle == false then
+			_1_1_2.CanvasPosition = _1_1_2.CanvasPosition + Vector2.new(0, 20)
+		end
+	end
+	function MsgLibrary:SentWarn(text)
+		local NewMsg = Instance.new("TextLabel")
+		NewMsg.Name = L.." - msg"
+		NewMsg.RichText = true
+		NewMsg.TextXAlignment = Enum.TextXAlignment.Left
+		NewMsg.AutomaticSize = Enum.AutomaticSize.Y
+		NewMsg.BackgroundColor3 = Color3.fromRGB(255, 100, 0)
+		NewMsg.BackgroundTransparency = 1.000
+		NewMsg.Size = UDim2.new(1, 0, 0, 20)
+		NewMsg.Text = "<font color=\"rgb(175, 175, 175)\"><b>"..os.date("%X").."<font/></b> "..text
+		NewMsg.TextColor3 = Color3.fromRGB(255, 170, 0)
+		NewMsg.TextScaled = false
+		NewMsg.TextSize = 16
+		NewMsg.TextWrapped = true
+		NewMsg.Font = font
+		NewMsg.Parent = _1_1_2
+		L = L + 1
+		if tonumber(_1_1_2.CanvasPosition.Y) >= tonumber(_1_1_2.CanvasSize.Y.Offset) and DragScrollToggle == false then
+			_1_1_2.CanvasPosition = _1_1_2.CanvasPosition + Vector2.new(0, 20)
+		end
+	end
+	function MsgLibrary:SentError(text)
+		local NewMsg = Instance.new("TextLabel")
+		NewMsg.Name = L.." - msg"
+		NewMsg.RichText = true
+		NewMsg.TextXAlignment = Enum.TextXAlignment.Left
+		NewMsg.AutomaticSize = Enum.AutomaticSize.Y
+		NewMsg.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
+		NewMsg.BackgroundTransparency = 1.000
+		NewMsg.Size = UDim2.new(1, 0, 0, 20)
+		NewMsg.Text = "<font color=\"rgb(175, 175, 175)\"><b>"..os.date("%X").."<font/></b> "..text
 		NewMsg.TextColor3 = Color3.fromRGB(255, 255, 255)
 		NewMsg.TextScaled = false
 		NewMsg.TextSize = 16
