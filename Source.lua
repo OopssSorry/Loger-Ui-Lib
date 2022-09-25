@@ -147,11 +147,11 @@ function Library:CreateFrame(label, font)
 		NewMsg.RichText = true
 		NewMsg.TextXAlignment = Enum.TextXAlignment.Left
 		NewMsg.AutomaticSize = Enum.AutomaticSize.Y
-		NewMsg.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
+		NewMsg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		NewMsg.BackgroundTransparency = 1.000
 		NewMsg.Size = UDim2.new(1, 0, 0, 20)
 		NewMsg.Text = [[<font color="rgb(175, 175, 175)"><b>]]..os.date("%X")..[[</font></b> ]]..text
-		NewMsg.TextColor3 = Color3.fromRGB(255, 255, 255)
+		NewMsg.TextColor3 = Color3.fromRGB(200, 50, 50)
 		NewMsg.TextScaled = false
 		NewMsg.TextSize = 16
 		NewMsg.TextWrapped = true
