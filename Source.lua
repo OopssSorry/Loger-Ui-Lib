@@ -1,13 +1,3 @@
-print([[ 
---
---											
--- Oopss Logger Ui - Loadet				
--- Free UI logger made by Oopss-Sorry#2067 
--- Discord: https://discord.gg/nAhmM6zEzy  
---											
---											
-]])
-
 local Library = {}
 function Library:CreateFrame(label, font)
 	if font == nil then
@@ -58,13 +48,14 @@ function Library:CreateFrame(label, font)
 	local _1_1_2 = Instance.new("ScrollingFrame")
 	local _1_1_2_1 = Instance.new("UIListLayout")
 	local _1_1_3 = Instance.new("TextLabel")
+	local _1_1_3_1 = Instance.new("UICorner")
 	_1.Name = " "
 	_1.Parent = game.CoreGui
 	_1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	_1_1.Name = " "
 	_1_1.Parent = _1
 	_1_1.AnchorPoint = Vector2.new(0, 1)
-	_1_1.BackgroundColor3 = Color3.fromRGB(22, 19, 62)
+	_1_1.BackgroundColor3 = Color3.fromRGB(39, 48, 88)
 	_1_1.Position = UDim2.new(0, 20, 1, -20)
 	_1_1.Size = UDim2.new(0, 400, 0, 400)
 	_1_1.ClipsDescendants = true
@@ -81,7 +72,7 @@ function Library:CreateFrame(label, font)
 	_1_1_2.CanvasSize = UDim2.new(0, 0, 0, 0)
 	_1_1_2.ScrollBarThickness = 10
 	_1_1_2.ScrollBarImageColor3 = Color3.fromRGB(140, 125, 255)
-	_1_1_2.BorderColor3 = Color3.fromRGB(140, 125, 255)
+	_1_1_2.BorderColor3 = Color3.fromRGB(39, 48, 88)
 	_1_1_2.AutomaticCanvasSize = Enum.AutomaticSize.Y
 	_1_1_2_1.Name = " "
 	_1_1_2_1.Parent = _1_1_2
@@ -90,8 +81,7 @@ function Library:CreateFrame(label, font)
 	_1_1_3.Parent = _1_1
 	_1_1_3.RichText = true
 	_1_1_3.AnchorPoint = Vector2.new(0.5, 0)
-	_1_1_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	_1_1_3.BackgroundTransparency = 0.75
+	_1_1_3.BackgroundColor3 = Color3.fromRGB(22, 19, 62)
 	_1_1_3.BorderSizePixel = 0
 	_1_1_3.Position = UDim2.new(0.5, 0, 0, 0)
 	_1_1_3.Size = UDim2.new(1, 0, 0.15, 0)
@@ -100,6 +90,9 @@ function Library:CreateFrame(label, font)
 	_1_1_3.TextColor3 = Color3.fromRGB(140, 125, 255)
 	_1_1_3.TextSize = 30
 	_1_1_3.TextWrapped = true
+	_1_1_3_1.Name = " "
+	_1_1_3_1.Parent = _1_1_3
+	_1_1_3_1.CornerRadius = UDim.new(0, 4)
 	dragify(_1_1)
 	function Library.RemoveFrame()
 		_1:Destroy()
@@ -139,4 +132,13 @@ function Library:CreateFrame(label, font)
 	end
 	return MsgLibrary
 end
+print([[ 
+--
+--											
+-- Oopss Logger Ui - Loadet				
+-- Free UI logger made by Oopss-Sorry#2067 
+-- Discord: https://discord.gg/nAhmM6zEzy  
+--											
+--											
+]])
 return Library
