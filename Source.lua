@@ -111,10 +111,10 @@ function Library:CreateFrame(label, font)
 		NewMsg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		NewMsg.BackgroundTransparency = 1.000
 		NewMsg.Size = UDim2.new(1, 0, 0, 20)
-		NewMsg.Text = "<b>"..os.date("%X").."</b>> "..text
+		NewMsg.Text = "<b>"..os.date("%X").."</b> "..text
 		NewMsg.TextColor3 = Color3.fromRGB(255, 255, 255)
 		NewMsg.TextScaled = false
-		NewMsg.TextSize = 18
+		NewMsg.TextSize = 16
 		NewMsg.TextWrapped = true
 		NewMsg.Font = font
 		NewMsg.Parent = _1_1_2
@@ -128,6 +128,7 @@ function Library:CreateFrame(label, font)
 				Messages[i]:Destroy()
 			end
 		end
+		wait(.1)
 	end
 	return MsgLibrary
 end
