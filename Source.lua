@@ -26,7 +26,6 @@ function Library:CreateFrame(label, font)
 			Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
 			game:GetService("TweenService"):Create(Frame, TweenInfo.new(.15), {Position = Position}):Play()
 		end
-
 		Frame.InputBegan:Connect(function(input)
 			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then
 				dragToggle = true
@@ -39,20 +38,20 @@ function Library:CreateFrame(label, font)
 				end)
 			end
 		end)
-
 		Frame.InputChanged:Connect(function(input)
 			if (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
 				dragInput = input
 			end
 		end)
-
 		game:GetService("UserInputService").InputChanged:Connect(function(input)
 			if (input == dragInput and dragToggle) then
 				updateInput(input)
 			end
 		end)
+		
 	end
 	wait()
+	local DragScrollToggle = false
 	local _1 = Instance.new("ScreenGui")
 	local _1_1 = Instance.new("Frame")
 	local _1_1_1 = Instance.new("UICorner")
@@ -124,7 +123,7 @@ function Library:CreateFrame(label, font)
 		NewMsg.Font = font
 		NewMsg.Parent = _1_1_2
 		L = L + 1
-		if _1_1_2.CanvasPosition.Y >= 340 then
+		if tonumber(_1_1_2.CanvasPosition.Y) >= tonumber(_1_1_2.CanvasSize.Y.Offset) and DragScrollToggle == false then
 			_1_1_2.CanvasPosition = _1_1_2.CanvasPosition + Vector2.new(0, 20)
 		end
 	end
