@@ -81,6 +81,8 @@ function Library:CreateFrame(label, font)
 	_1_1_2.Size = UDim2.new(1, 0, 0.85, 0)
 	_1_1_2.CanvasSize = UDim2.new(0, 0, 0, 0)
 	_1_1_2.ScrollBarThickness = 10
+	_1_1_2.ScrollBarImageColor3 = Color3.fromRGB(140, 125, 255)
+	_1_1_2.BorderColor3 = Color3.fromRGB(140, 125, 255)
 	_1_1_2.AutomaticCanvasSize = Enum.AutomaticSize.Y
 	_1_1_2_1.Name = " "
 	_1_1_2_1.Parent = _1_1_2
@@ -122,7 +124,7 @@ function Library:CreateFrame(label, font)
 		NewMsg.Font = font
 		NewMsg.Parent = _1_1_2
 		L = L + 1
-		_1_1_2.CanvasPosition.Y = _1_1_2.CanvasSize.Y.Scale - _1_1_2.Size.Y.Scale
+		_1_1_2.CanvasPosition.Y = math.max()
 	end
 	function MsgLibrary:ClearMessages()
 		L = 0
