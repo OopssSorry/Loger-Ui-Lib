@@ -98,9 +98,12 @@ function Library:CreateFrame(label, font)
 	_1_1_3.TextSize = 30.000
 	_1_1_3.TextWrapped = true
 	dragify(_1_1)
+	function Library.RemoveFrame()
+		_1:Destroy()
+	end
 	local L = 0
 	local MsgLibrary = {}
-	function MsgLibrary:Sent(text)
+	function MsgLibrary:SentMessage(text)
 		local NewMsg = Instance.new("TextLabel")
 		NewMsg.Name = L.." - msg"
 		NewMsg.RichText = true
@@ -117,7 +120,7 @@ function Library:CreateFrame(label, font)
 		NewMsg.Parent = _1_1_2
 		L = L + 1
 	end
-	function msg:Clear()
+	function MsgLibrary:ClearMessages()
 		L = 0
 		local Messages = _1_1_2:GetChildren()
 		for i = 1, #Messages do
@@ -125,9 +128,6 @@ function Library:CreateFrame(label, font)
 				Messages[i]:Destroy()
 			end
 		end
-	end
-	function Library.Remove()
-		_1:Destroy()
 	end
 	return MsgLibrary
 end
