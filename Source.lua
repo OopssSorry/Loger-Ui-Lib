@@ -11,7 +11,7 @@ print([[
 local Library = {}
 function Library:CreateFrame(label, font)
 	if font == nil then
-		font = Enum.Font.Arcade
+		font = Enum.Font.Code
 	end
 	local function dragify(Frame)
 		local dragToggle = nil
@@ -94,7 +94,7 @@ function Library:CreateFrame(label, font)
 	_1_1_3.Font = font
 	_1_1_3.Text = label
 	_1_1_3.TextColor3 = Color3.fromRGB(140, 125, 255)
-	_1_1_3.TextScaled = true
+	_1_1_3.TextSize = 30
 	_1_1_3.TextWrapped = true
 	dragify(_1_1)
 	function Library.RemoveFrame()
@@ -111,12 +111,12 @@ function Library:CreateFrame(label, font)
 		NewMsg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		NewMsg.BackgroundTransparency = 1.000
 		NewMsg.Size = UDim2.new(1, 0, 0, 20)
-		NewMsg.Text = "<b>"..os.date("%X").."</b> -- "..text
+		NewMsg.Text = "<b>"..os.date("%X").."</b> > "..text
 		NewMsg.TextColor3 = Color3.fromRGB(255, 255, 255)
 		NewMsg.TextScaled = false
-		NewMsg.TextSize = 20
+		NewMsg.TextSize = 18
 		NewMsg.TextWrapped = true
-		NewMsg.Font = Enum.Font.Arcade
+		NewMsg.Font = font
 		NewMsg.Parent = _1_1_2
 		L = L + 1
 	end
