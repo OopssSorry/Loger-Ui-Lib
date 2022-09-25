@@ -67,7 +67,7 @@ function Library:CreateFrame(label, font)
 	_1_1.AnchorPoint = Vector2.new(0, 1)
 	_1_1.BackgroundColor3 = Color3.fromRGB(22, 19, 62)
 	_1_1.Position = UDim2.new(0, 20, 1, -20)
-	_1_1.Size = UDim2.new(0, 500, 0, 500)
+	_1_1.Size = UDim2.new(0, 550, 0, 550)
 	_1_1_1.Name = " "
 	_1_1_1.Parent = _1_1
 	_1_1_1.CornerRadius = UDim.new(0, 6)
