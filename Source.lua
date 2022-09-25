@@ -68,6 +68,7 @@ function Library:CreateFrame(label, font)
 	_1_1.BackgroundColor3 = Color3.fromRGB(22, 19, 62)
 	_1_1.Position = UDim2.new(0, 20, 1, -20)
 	_1_1.Size = UDim2.new(0, 400, 0, 400)
+	_1_1.ClipsDescendants = true
 	_1_1_1.Name = " "
 	_1_1_1.Parent = _1_1
 	_1_1_1.CornerRadius = UDim.new(0, 6)
@@ -78,13 +79,15 @@ function Library:CreateFrame(label, font)
 	_1_1_2.BackgroundTransparency = 1
 	_1_1_2.Position = UDim2.new(0.5, 0, 0.15, 0)
 	_1_1_2.Size = UDim2.new(1, 0, 0.85, 0)
-	_1_1_2.CanvasSize = UDim2.new(0, 0, 0, 3)
+	_1_1_2.CanvasSize = UDim2.new(0, 0, 0, 0)
 	_1_1_2.ScrollBarThickness = 10
+	_1_1_2.AutomaticCanvasSize = Enum.AutomaticSize.Y
 	_1_1_2_1.Name = " "
 	_1_1_2_1.Parent = _1_1_2
 	_1_1_2_1.SortOrder = Enum.SortOrder.LayoutOrder
 	_1_1_3.Name = " "
 	_1_1_3.Parent = _1_1
+	_1_1_3.RichText = true
 	_1_1_3.AnchorPoint = Vector2.new(0.5, 0)
 	_1_1_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 	_1_1_3.BackgroundTransparency = 0.75
@@ -92,7 +95,7 @@ function Library:CreateFrame(label, font)
 	_1_1_3.Position = UDim2.new(0.5, 0, 0, 0)
 	_1_1_3.Size = UDim2.new(1, 0, 0.15, 0)
 	_1_1_3.Font = font
-	_1_1_3.Text = label
+	_1_1_3.Text = "<b>"..label.."</b>"
 	_1_1_3.TextColor3 = Color3.fromRGB(140, 125, 255)
 	_1_1_3.TextSize = 30
 	_1_1_3.TextWrapped = true
@@ -119,6 +122,9 @@ function Library:CreateFrame(label, font)
 		NewMsg.Font = font
 		NewMsg.Parent = _1_1_2
 		L = L + 1
+		if _1_1_2.CanvasPosition.Y >= _1_1_2.CanvasSize.Y-(_1_1.Size.Y.Scale+50) then
+			_1_1_2.CanvasPosition = Vector2.new(_1_1_2.CanvasSize.Y.Scale-_1_1.Size.Y.Scale, 0)
+		end
 	end
 	function MsgLibrary:ClearMessages()
 		L = 0
