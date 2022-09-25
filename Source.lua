@@ -35,6 +35,7 @@ function dragify(Frame)
 	end)
 end
 function Library:Create(Text1, Font1, Color1)
+	print("123")
 	if Text1 == nil then
 		Text1 = "Oopss Loger Ui"
 	end
