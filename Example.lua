@@ -1,5 +1,5 @@
 local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/OopssSorry/Loger-Ui-Lib/main/Source.lua"))()
-local msg = Lib.Create("Logger",Enum.Font.Arcade,nil)
+Lib:Create("Logger",Enum.Font.Arcade,nil)
 msg:Sent("Test1",Enum.Font.Arcade,nil)
 -----------------------------------
 -- Lib.Create("Text",Enum.Font.Arcade,Color3.fromRGB(255, 255, 255)) -- Create frame
