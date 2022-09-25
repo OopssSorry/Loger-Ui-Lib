@@ -124,7 +124,9 @@ function Library:CreateFrame(label, font)
 		NewMsg.Font = font
 		NewMsg.Parent = _1_1_2
 		L = L + 1
-		_1_1_2.CanvasPosition = _1_1_2.CanvasSize
+		if _1_1_2.CanvasPosition >= 340 then
+			_1_1_2.CanvasPosition = _1_1_2.CanvasPosition + Vector2.new(0, 20)
+		end
 	end
 	function MsgLibrary:ClearMessages()
 		L = 0
