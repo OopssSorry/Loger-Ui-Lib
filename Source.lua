@@ -1,5 +1,7 @@
 local Library = {}
-function dragify(Frame)
+function Library:Frame(Text1, Font1, Color1)
+	print("123")
+	function dragify(Frame)
 	local dragToggle = nil
 	local dragInput = nil
 	local dragStart = nil
@@ -34,8 +36,6 @@ function dragify(Frame)
 		end
 	end)
 end
-function Library:Frame(Text1, Font1, Color1)
-	print("123")
 	if Text1 == nil then
 		Text1 = "Oopss Loger Ui"
 	end
