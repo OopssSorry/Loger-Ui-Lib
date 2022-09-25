@@ -1,7 +1,7 @@
 print([[ 
 --
 --											
--- Oopss Loger Ui - Loadet				
+-- Oopss Logger Ui - Loadet				
 -- Free UI logger made by Oopss-Sorry#2067 
 -- Discord: https://discord.gg/nAhmM6zEzy  
 --											
