@@ -124,7 +124,7 @@ function Library:CreateFrame(label, font)
 		NewMsg.Font = font
 		NewMsg.Parent = _1_1_2
 		L = L + 1
-		_1_1_2.CanvasPosition.Y = 1000000000
+		_1_1_2.CanvasPosition = Vector2.new(0,1000000000)
 	end
 	function MsgLibrary:ClearMessages()
 		L = 0
