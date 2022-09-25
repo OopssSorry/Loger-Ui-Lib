@@ -34,7 +34,7 @@ function dragify(Frame)
 		end
 	end)
 end
-function Library.Create(Text1, Font1, Color1)
+function Library:Create(Text1, Font1, Color1)
 	if Text1 == nil then
 		Text1 = "Oopss Loger Ui"
 	end
