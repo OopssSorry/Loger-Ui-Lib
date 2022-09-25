@@ -106,9 +106,6 @@ function Library:CreateFrame(label, font)
 	local L = 0
 	local MsgLibrary = {}
 	function MsgLibrary:SentMessage(text)
-		local ToSkip = false
-		if _1_1_2.CanvasPosition.Y == _1_1_2.CanvasSize.Y.Scale - _1_1_2.Size.Y.Scale then
-		end
 		local NewMsg = Instance.new("TextLabel")
 		NewMsg.Name = L.." - msg"
 		NewMsg.RichText = true
@@ -125,9 +122,7 @@ function Library:CreateFrame(label, font)
 		NewMsg.Font = font
 		NewMsg.Parent = _1_1_2
 		L = L + 1
-		if ToSkip == true then
-			_1_1_2.CanvasPosition.Y = _1_1_2.CanvasSize.Y.Scale - _1_1_2.Size.Y.Scale
-		end
+		_1_1_2.CanvasPosition.Y = _1_1_2.CanvasSize.Y.Scale - _1_1_2.Size.Y.Scale
 	end
 	function MsgLibrary:ClearMessages()
 		L = 0
