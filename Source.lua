@@ -122,8 +122,8 @@ function Library:CreateFrame(label, font)
 		NewMsg.Font = font
 		NewMsg.Parent = _1_1_2
 		L = L + 1
-		if _1_1_2.CanvasPosition.Y >= _1_1_2.CanvasSize.Y-_1_1.Size.Y.Scale+50 then
-			_1_1_2.CanvasPosition.Y = _1_1_2.CanvasSize.Y.Scale-_1_1.Size.Y.Scale
+		if _1_1_2.CanvasPosition.Y >= _1_1_2.CanvasSize.Y.Scale - _1_1.Size.Y.Scale + 50 then
+			_1_1_2.CanvasPosition.Y = _1_1_2.CanvasSize.Y.Scale -_1_1.Size.Y.Scale
 		end
 	end
 	function MsgLibrary:ClearMessages()
